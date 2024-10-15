@@ -6,13 +6,13 @@ function Counter(props) {
       <p className="mb-3 font-bold text-xl text-gray-400">{props.children}</p>
       <div className="flex justify-center gap-2">
         <button
-          className="bg-red-900 p-2 px-4 w-[100px] rounded-full"
+          className="bg-red-700 p-2 px-4 w-[100px] rounded-full"
           onClick={props.decreaseCount}
         >
           Minus
         </button>
         <button
-          className="bg-green-900 p-2 px-4 w-[100px] rounded-full"
+          className="bg-green-700 p-2 px-4 w-[100px] rounded-full"
           onClick={props.increaseCount}
         >
           Plus

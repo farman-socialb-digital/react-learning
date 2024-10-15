@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -26,6 +26,18 @@ function Navbar() {
           to="/route-parameter/anyparameter"
         >
           Route Parameter
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-3 px-5 rounded-full text-gray-400"
+              : "bg-gray-800 p-3 px-5 rounded-full text-gray-400"
+          }
+          to="/nested-routing/"
+        >
+          Nested Routing
         </NavLink>
       </li>
       <li>

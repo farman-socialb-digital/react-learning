@@ -8,7 +8,7 @@ function Home() {
   }
   return (
     <>
-      <div className="max-w-[500px] m-auto text-center border border-gray-700 overflow-hidden rounded-xl mb-5">
+      <div className="max-w-[500px] m-auto text-center border border-gray-700 overflow-hidden rounded-xl mb-8">
         <p className="font-medium py-3 text-gray-300 bg-gray-800">
           Whats we learn in the Routing
         </p>
@@ -24,9 +24,6 @@ function Home() {
           <li className="list-disc list-inside">Nested Routing</li>
           <li className="list-disc list-inside">404 Page</li>
         </ul>
-      </div>
-      <div className="max-w-[600px] m-auto text-center border border-gray-700 overflow-hidden rounded-xl p-5 text-xl mb-5 font-bold">
-        Nested Routing
       </div>
       <button
         className="border border-gray-600 p-2 px-4 rounded-full text-gray-400"

@@ -38,7 +38,7 @@ function BasicReact() {
 
   return (
     <>
-      <div className="max-w-[450px] m-auto">
+      <div className="max-w-[500px] m-auto">
         <InputField inputText={inputText} inputTextUpdate={inputTextUpdate} />
         <Counter increaseCount={increaseCount} decreaseCount={decreaseCount}>
           {count}
@@ -46,7 +46,7 @@ function BasicReact() {
         <HelloHey hello={hello} changeHelloHey={changeHelloHey} />
       </div>
       <button
-        className="border border-gray-600 p-2 px-4 rounded-full text-gray-400"
+        className="border border-gray-600 p-2 px-4 rounded-full text-gray-400 mb-8"
         onClick={navigatePageHome}
       >
         Go to Home
