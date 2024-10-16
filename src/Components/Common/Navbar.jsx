@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <ul className="bg-gray-700 flex gap-3 justify-center py-5 mb-10 text-white">
+    <ul className="bg-gray-700 flex gap-2 justify-center py-2 mb-10 text-white flex-wrap">
       <li>
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-3 px-5 rounded-full text-gray-400"
-              : "bg-gray-800 p-3 px-5 rounded-full text-gray-400"
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
           }
           to="/"
         >
@@ -20,8 +20,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-3 px-5 rounded-full text-gray-400"
-              : "bg-gray-800 p-3 px-5 rounded-full text-gray-400"
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
           }
           to="/route-parameter/anyparameter"
         >
@@ -32,8 +32,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-3 px-5 rounded-full text-gray-400"
-              : "bg-gray-800 p-3 px-5 rounded-full text-gray-400"
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
           }
           to="/nested-routing/"
         >
@@ -44,12 +44,48 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-3 px-5 rounded-full text-gray-400"
-              : "bg-gray-800 p-3 px-5 rounded-full text-gray-400"
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
           }
           to="/basic-react"
         >
           Basic React
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+          }
+          to="/useeffect"
+        >
+          UseEffect
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+          }
+          to="/conditional-rendering"
+        >
+          Conditional Rendering
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+          }
+          to="/lifting-state-up"
+        >
+          Lifting State Up
         </NavLink>
       </li>
     </ul>

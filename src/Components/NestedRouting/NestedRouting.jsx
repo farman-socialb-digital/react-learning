@@ -26,7 +26,7 @@ function NestedRouting() {
         <p className="font-medium py-3 text-gray-300 bg-gray-800">
           Nested Routing
         </p>
-        <div className="m-4 my-5 flex flex-wrap gap-4 justify-center">
+        <div className="m-4 my-5 flex gap-3 justify-center">
           <button className="bg-green-800 p-2 px-4 w-2/5 rounded-full" onClick={navigateToCourses}>
             Courses
           </button>
