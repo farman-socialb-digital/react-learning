@@ -13,16 +13,14 @@ function Home() {
           Whats we learn in the Routing
         </p>
         <ul className="m-4 text-left text-gray-400">
-          <li className="list-disc list-inside">Basic Routing</li>
-          <li className="list-disc list-inside">Use of Link Tag</li>
-          <li className="list-disc list-inside">Use of NavLink Tag</li>
-          <li className="list-disc list-inside">NavLink Tag active class</li>
-          <li className="list-disc list-inside">
-            Route parameter with useParams Hook ( Dynamic Routing )
-          </li>
-          <li className="list-disc list-inside">Use of useNavigation</li>
-          <li className="list-disc list-inside">Nested Routing</li>
-          <li className="list-disc list-inside">404 Page</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Basic Routing</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Use of Link Tag</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Use of NavLink Tag</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">NavLink Tag active class</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Route parameter with useParams Hook ( Dynamic Routing )</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Use of useNavigation</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">Nested Routing</li>
+          <li className="list-disc list-inside hover:text-gray-300 my-1">404 Page</li>
         </ul>
       </div>
       <button

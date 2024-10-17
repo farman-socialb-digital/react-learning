@@ -9,7 +9,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/"
         >
@@ -21,7 +21,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/route-parameter/anyparameter"
         >
@@ -33,7 +33,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/nested-routing/"
         >
@@ -45,7 +45,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/basic-react"
         >
@@ -57,7 +57,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/useeffect"
         >
@@ -69,7 +69,7 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/conditional-rendering"
         >
@@ -81,11 +81,23 @@ function Navbar() {
           className={({ isActive }) =>
             isActive
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/lifting-state-up"
         >
           Lifting State Up
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+          }
+          to="/crud-operations"
+        >
+          CRUD Operations
         </NavLink>
       </li>
     </ul>

@@ -11,10 +11,11 @@ import NestedRouting from "../NestedRouting/NestedRouting";
   import Exam from "../NestedRouting/Exam";
   import Results from "../NestedRouting/Results";
 import BasicReact from "../BasicReact/BasicReact";
-import UseEffect from "../Hooks/UseEffect";
+import UseEffect from "../Hooks/UseEffectComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
 import NotFound from "./NotFound";
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
+import CrudOperations from '../CrudOperations/CrudOperations'
 
 const router = createBrowserRouter([
     {
@@ -101,6 +102,14 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <LiftingStateUp/>
+        </>
+    },
+    {
+      path: "/crud-operations",
+      element:
+        <>
+          <Navbar />
+          <CrudOperations/>
         </>
     },
     {
