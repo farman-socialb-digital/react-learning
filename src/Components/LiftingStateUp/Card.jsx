@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div className="max-w-[500px] m-auto bg-gray-800 rounded-xl p-5 pt-4 mb-8">
+    <div className="max-w-[550px] m-auto bg-gray-800 rounded-xl p-5 pt-4 mb-8">
       <p className="mb-3 font-bold text-xl text-gray-400">{props.title}</p>
       <input
         type="text"

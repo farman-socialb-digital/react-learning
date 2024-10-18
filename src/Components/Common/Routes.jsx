@@ -15,7 +15,9 @@ import UseEffect from "../Hooks/UseEffectComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
 import NotFound from "./NotFound";
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
-import CrudOperations from '../CrudOperations/CrudOperations'
+import CrudUser from '../CrudUser/CrudUser'
+import CreateUser from '../CrudUser/CreateUser';
+import EditUser from '../CrudUser/EditUser';
 
 const router = createBrowserRouter([
     {
@@ -105,12 +107,26 @@ const router = createBrowserRouter([
         </>
     },
     {
-      path: "/crud-operations",
+      path: "/crud-user",
       element:
         <>
           <Navbar />
-          <CrudOperations/>
-        </>
+          <CrudUser/>
+        </>,
+    },
+    {
+      path: "/crud-user/create-user",
+      element: <>
+        <Navbar />
+        <CreateUser/>
+      </>
+    },
+    {
+      path: "/crud-user/edit-user",
+      element: <>
+        <Navbar />
+        <EditUser/>
+      </>
     },
     {
       path: "*",

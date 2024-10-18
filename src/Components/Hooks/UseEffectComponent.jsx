@@ -66,7 +66,19 @@ function UseEffectComponent() {
             <button className="bg-green-700 p-2 px-4 rounded-full" onClick={increaseCountTwo}>
                 Increase Count two
             </button> */}
-            <ToastContainer/>
+            <ToastContainer
+                position="bottom-left"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition: Slide
+            />
         </>
     )
 }

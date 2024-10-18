@@ -38,7 +38,7 @@ function BasicReact() {
 
   return (
     <>
-      <div className="max-w-[500px] m-auto">
+      <div className="max-w-[550px] m-auto">
         <InputField inputText={inputText} inputTextUpdate={inputTextUpdate} />
         <Counter increaseCount={increaseCount} decreaseCount={decreaseCount}>
           {count}

@@ -95,9 +95,9 @@ function Navbar() {
               ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
               : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
-          to="/crud-operations"
+          to="/crud-user"
         >
-          CRUD Operations
+          CRUD User
         </NavLink>
       </li>
     </ul>
