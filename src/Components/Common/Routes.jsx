@@ -18,6 +18,7 @@ import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
 import CrudUser from '../CrudUser/CrudUser'
 import CreateUser from '../CrudUser/CreateUser';
 import EditUser from '../CrudUser/EditUser';
+import Hoc from '../Hoc/Hoc';
 
 const router = createBrowserRouter([
     {
@@ -126,6 +127,13 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <EditUser/>
+      </>
+    },
+    {
+      path: "/hoc",
+      element: <>
+        <Navbar />
+        <Hoc/>
       </>
     },
     {

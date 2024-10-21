@@ -13,10 +13,25 @@ function CrudUser() {
         setData(response.data);
       });
   }
+
+  let hanleDelete = (id) => {
+    axios
+      .delete(`https://6712334a4eca2acdb5f7902f.mockapi.io/crud-user/${id}`)
+      .then(() => {
+        getUserData();
+      });
+  };
+
+  let editHandle = (id, name, email) => {
+    localStorage.setItem("id", id);
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+  };
+
   useEffect(() => {
     getUserData();
-  }, [data]);
-  
+  }, []);
+
   return (
     <>
       <div className="flex justify-end max-w-[550px] m-auto">
@@ -47,8 +62,22 @@ function CrudUser() {
                     <td className="py-1.5 px-3">{eachUserData.name}</td>
                     <td className="py-1.5 px-3">{eachUserData.email}</td>
                     <td className="flex justify-center gap-3 py-1.5 px-3">
-                      <CiEdit className="text-green-300" />
-                      <RiDeleteBin6Line className="text-red-600" />
+                      <Link to="/crud-user/edit-user">
+                        <button
+                          onClick={() =>
+                            editHandle(
+                              eachUserData.id,
+                              eachUserData.name,
+                              eachUserData.email
+                            )
+                          }
+                        >
+                          <CiEdit className="text-green-300" />
+                        </button>
+                      </Link>
+                      <button onClick={() => hanleDelete(eachUserData.id)}>
+                        <RiDeleteBin6Line className="text-red-600" />
+                      </button>
                     </td>
                   </tr>
                 );
