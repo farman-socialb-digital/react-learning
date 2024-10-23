@@ -61,7 +61,19 @@ function Navbar() {
           }
           to="/useeffect"
         >
-          UseEffect
+          useEffect
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+          }
+          to="/usecontext"
+        >
+          useContext
         </NavLink>
       </li>
       <li>
@@ -110,6 +122,18 @@ function Navbar() {
           to="/hoc"
         >
           HOC
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+          }
+          to="/react-hook-form"
+        >
+          React Hook Form
         </NavLink>
       </li>
       <li>

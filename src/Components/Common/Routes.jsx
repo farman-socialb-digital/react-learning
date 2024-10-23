@@ -11,7 +11,8 @@ import NestedRouting from "../NestedRouting/NestedRouting";
   import Exam from "../NestedRouting/Exam";
   import Results from "../NestedRouting/Results";
 import BasicReact from "../BasicReact/BasicReact";
-import UseEffect from "../Hooks/UseEffectComponent";
+import UseEffectComponent from "../Hooks/UseEffect/UseEffectComponent";
+import UseContextComponent from "../Hooks/UseContext/UseContextComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
 import NotFound from "./NotFound";
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
@@ -19,6 +20,7 @@ import CrudUser from '../CrudUser/CrudUser'
 import CreateUser from '../CrudUser/CreateUser';
 import EditUser from '../CrudUser/EditUser';
 import Hoc from '../Hoc/Hoc';
+import ReactHookForm from '../ReactHookForm/ReactHookForm';
 import Redux from '../Redux/Redux'
 
 const router = createBrowserRouter([
@@ -89,7 +91,15 @@ const router = createBrowserRouter([
       element:
         <>
           <Navbar />
-          <UseEffect/>
+          <UseEffectComponent/>
+        </>
+    },
+    {
+      path: "/usecontext",
+      element:
+        <>
+          <Navbar />
+          <UseContextComponent/>
         </>
     },
     {
@@ -135,6 +145,13 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <Hoc/>
+      </>
+    },
+    {
+      path: "/react-hook-form",
+      element: <>
+        <Navbar />
+        <ReactHookForm/>
       </>
     },
     {
