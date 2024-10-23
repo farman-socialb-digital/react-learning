@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Routes from './Components/Common/Routes'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import Routes from "./Components/Common/Routes";
+import "./index.css";
+import { store } from './app/store'
+import { Provider } from "react-redux";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Routes/>
-  </StrictMode>,
-)
+    <Provider store={store}>
+      <Routes />
+    </Provider>
+  </StrictMode>
+);

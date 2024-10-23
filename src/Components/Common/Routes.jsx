@@ -19,6 +19,7 @@ import CrudUser from '../CrudUser/CrudUser'
 import CreateUser from '../CrudUser/CreateUser';
 import EditUser from '../CrudUser/EditUser';
 import Hoc from '../Hoc/Hoc';
+import Redux from '../Redux/Redux'
 
 const router = createBrowserRouter([
     {
@@ -134,6 +135,13 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <Hoc/>
+      </>
+    },
+    {
+      path: "/redux",
+      element: <>
+        <Navbar />
+        <Redux/>
       </>
     },
     {
