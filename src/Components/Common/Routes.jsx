@@ -13,6 +13,7 @@ import NestedRouting from "../NestedRouting/NestedRouting";
 import BasicReact from "../BasicReact/BasicReact";
 import UseEffectComponent from "../Hooks/UseEffect/UseEffectComponent";
 import UseContextComponent from "../Hooks/UseContext/UseContextComponent";
+import UseMemoComponent from "../Hooks/UseMemoComponent/UseMemoComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
 import NotFound from "./NotFound";
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
@@ -100,6 +101,14 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseContextComponent/>
+        </>
+    },
+    {
+      path: "/usememo",
+      element:
+        <>
+          <Navbar />
+          <UseMemoComponent/>
         </>
     },
     {

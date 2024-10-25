@@ -3,6 +3,15 @@ import { useForm } from "react-hook-form";
 import loader from "/svg/loader.svg";
 
 function ReactHookForm() {
+
+  // 1 - Create Form
+  // 2 - Fields Register
+  // 3 - Validation
+  // 4 - Error Handling
+  // 5 - Styling error
+  // 6 - Prevent multiple submission
+  // 7 - Take care onSubmit
+
   const {
     register,
     handleSubmit,
@@ -57,15 +66,15 @@ function ReactHookForm() {
         {errors.email && (
           <p className="text-red-600 text-center">{errors.email.message}</p>
         )}
-        <div className="mt-5 text-center">
+        <div className="mt-5 text-center flex justify-center">
           <button
             type="submit"
-            className={`bg-green-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer ${
+            className={`bg-green-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer flex ${
               isSubmitting ? "opacity-50" : ""
             }`}
             disabled={isSubmitting}
           >
-            {isSubmitting ? (<p className="flex">Submitting <img src= {loader} height={24} width={24} /></p>) : "Submit"}
+            {isSubmitting ? (<>Submitting <img src= {loader} height={24} width={24} /></>) : "Submit"}
           </button>
         </div>
       </form>
