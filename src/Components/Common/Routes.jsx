@@ -14,9 +14,8 @@ import BasicReact from "../BasicReact/BasicReact";
 import UseEffectComponent from "../Hooks/UseEffect/UseEffectComponent";
 import UseContextComponent from "../Hooks/UseContext/UseContextComponent";
 import UseRefComponent from "../Hooks/UseRef/UseRefComponent";
-import UseMemoComponent from "../Hooks/UseMemoComponent/UseMemoComponent";
+import UseMemoComponent from "../Hooks/UseMemo/UseMemoComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
-import NotFound from "./NotFound";
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
 import CrudUser from '../CrudUser/CrudUser'
 import CreateUser from '../CrudUser/CreateUser';
@@ -24,6 +23,7 @@ import EditUser from '../CrudUser/EditUser';
 import Hoc from '../Hoc/Hoc';
 import ReactHookForm from '../ReactHookForm/ReactHookForm';
 import Redux from '../Redux/Redux'
+import NotFound from "./NotFound";
 
 const router = createBrowserRouter([
     {

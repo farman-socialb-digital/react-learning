@@ -25,7 +25,7 @@ function Navbar() {
           }
           to="/route-parameter/anyparameter"
         >
-          Route Parameter
+          Route Parameter (useParams)
         </NavLink>
       </li>
       <li>

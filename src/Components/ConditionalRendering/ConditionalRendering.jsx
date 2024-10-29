@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import Button from '../Common/Button'
+import React, { useState } from "react";
+import Button from "../Common/Button";
 
 function ConditionalRendering() {
-  let [isLogin, setIsLogin] = useState(true)
+  let [isLogin, setIsLogin] = useState(true);
 
   // if(!isLogin){
   //   return(
@@ -10,30 +10,23 @@ function ConditionalRendering() {
   //   )
   // }
 
-
   // return(
   //   <>
   //     {isLogin && <Button name="Logout" bgColor="red"/>}
   //   </>
   // )
-  
 
   // return(
   //   <>
   //     {isLogin ? <Button name="Logout" bgColor="red"/> : <Button name="Login" bgColor="green"/>}
   //   </>
   // )
-  
-  
-  if(isLogin){
-    return(
-      <Button name="Logout" bgColor="red"/>
-    )
+
+  if (isLogin) {
+    return <Button name="Logout" bgColor="red" />;
   } else {
-    return(
-      <Button name="Login" bgColor="green"/>
-    )
+    return <Button name="Login" bgColor="green" />;
   }
 }
 
-export default ConditionalRendering
+export default ConditionalRendering;

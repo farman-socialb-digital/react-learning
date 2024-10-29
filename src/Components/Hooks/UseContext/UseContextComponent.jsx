@@ -5,7 +5,7 @@ import ChildA from "./ChildA";
 const UserContext = createContext();
 const RollContext = createContext();
 
-// Step 2 : Wrap all the child inside a provider who wants to become sonsumer
+// Step 2 : Wrap all the child inside a provider who wants to become consumer
 // Step 3 : Pass value
 // Step 4 : Export Context
 // Step 5 : Consumer k andar jaake consume kr lo
