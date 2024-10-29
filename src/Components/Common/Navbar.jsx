@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { SlHome } from "react-icons/sl";
 
 function Navbar() {
   return (
-    <ul className="bg-gray-700 flex gap-2 justify-center py-2 mb-10 text-white flex-wrap">
+    <ul className="bg-gray-700 flex gap-1 justify-center py-2 mb-10 text-white flex-wrap">
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -13,7 +14,7 @@ function Navbar() {
           }
           to="/"
         >
-          Home
+          <SlHome className="inline-block align-baseline" />
         </NavLink>
       </li>
       <li>
@@ -25,7 +26,7 @@ function Navbar() {
           }
           to="/route-parameter/anyparameter"
         >
-          Route Parameter (useParams)
+          Route Parameter(useParams)
         </NavLink>
       </li>
       <li>
@@ -49,7 +50,7 @@ function Navbar() {
           }
           to="/basic-react"
         >
-          Basic React
+          Basic React(useState)
         </NavLink>
       </li>
       <li>
@@ -98,6 +99,18 @@ function Navbar() {
           to="/usememo"
         >
           useMemo
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+          }
+          to="/usecallback"
+        >
+          useCallback
         </NavLink>
       </li>
       <li>

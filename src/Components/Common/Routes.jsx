@@ -15,6 +15,7 @@ import UseEffectComponent from "../Hooks/UseEffect/UseEffectComponent";
 import UseContextComponent from "../Hooks/UseContext/UseContextComponent";
 import UseRefComponent from "../Hooks/UseRef/UseRefComponent";
 import UseMemoComponent from "../Hooks/UseMemo/UseMemoComponent";
+import UseCallbackComponent from "../Hooks/UseCallback/UseCallbackComponent";
 import ConditionalRendering from '../ConditionalRendering/ConditionalRendering';
 import LiftingStateUp from '../LiftingStateUp/LiftingStateUp';
 import CrudUser from '../CrudUser/CrudUser'
@@ -118,6 +119,14 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseMemoComponent/>
+        </>
+    },
+    {
+      path: "/usecallback",
+      element:
+        <>
+          <Navbar />
+          <UseCallbackComponent/>
         </>
     },
     {
