@@ -5,9 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 // Directly access any element in DOM
 
 function UseRefComponent() {
-  {
-    /*
-  let [count, setCount] = useState(1);
+  {/* let [count, setCount] = useState(1);
 
   let val = useRef(0);
 
@@ -24,9 +22,8 @@ function UseRefComponent() {
 
   let btnRef = useRef();
 
-  let changeColor = () => btnRef.current.style.backgroundColor = "rgb(185 28 28)"
-  */
-  }
+  let changeColor = () => btnRef.current.style.backgroundColor = "rgb(185 28 28)" */}
+  
 
   let [time, setTime] = useState(0);
   let timeRef = useRef(null)

@@ -1,6 +1,9 @@
 import React, { useCallback, useState } from "react";
 import Child from "./Child";
 
+// use React.memo to prevent re-render unnecessarily of child-component
+// if you are sending a function to child component then React.memo wont be able to save you from re—rendering
+
 function UseCallbackComponent() {
   let [countOne, setCountOne] = useState(0);
   let [countTwo, setCountTwo] = useState(0);

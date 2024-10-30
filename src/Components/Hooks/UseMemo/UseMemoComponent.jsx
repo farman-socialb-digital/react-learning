@@ -18,8 +18,12 @@ function UseMemoComponent() {
         Increase Count
       </button>
       <div className="my-3">Count is : {count}</div>
-      <input type="number" className="rounded-full p-3 px-5 w-full bg-gray-800 outline-none text-gray-350 m-auto max-w-[300px] text-center" placeholder="Enter number" onChange={(e) => setInput(e.target.value)} />
-      <div className="mt-2">Double value : {doubleValue}</div>
+      <input
+        type="number"
+        className="rounded-full p-3 px-5 w-full bg-gray-800 outline-none text-gray-350 m-auto max-w-[300px] text-center"
+        placeholder="Enter number"
+        onChange={(e) => setInput(e.target.value)}
+      />
     </>
   );
 }
