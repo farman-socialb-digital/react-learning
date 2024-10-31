@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CiEdit } from "react-icons/ci";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import loader from "/svg/loader.svg";
 import axios from "axios";
 
 function CrudUser() {
   let [data, setData] = useState([]);
+  let [isLoading, setIsLoading] = useState(false);
   function getUserData() {
+    setIsLoading(true);
     axios
       .get("https://6712334a4eca2acdb5f7902f.mockapi.io/crud-user")
       .then((response) => {
         setData(response.data);
+        setIsLoading(false);
       });
   }
 
@@ -55,33 +59,41 @@ function CrudUser() {
               </tr>
             </thead>
             <tbody>
-              {data.map((eachUserData, i) => {
-                return (
-                  <tr key={i}>
-                    <td className="py-1.5 px-3">{eachUserData.id}</td>
-                    <td className="py-1.5 px-3">{eachUserData.name}</td>
-                    <td className="py-1.5 px-3">{eachUserData.email}</td>
-                    <td className="flex justify-center gap-3 py-1.5 px-3">
-                      <Link to="/crud-user/edit-user">
-                        <button
-                          onClick={() =>
-                            editHandle(
-                              eachUserData.id,
-                              eachUserData.name,
-                              eachUserData.email
-                            )
-                          }
-                        >
-                          <CiEdit className="text-green-300" />
+              {isLoading ? (
+                <tr>
+                  <td colSpan={4} className="text-center">
+                    <img className="inline-block" src={loader} height={24} width={24} />
+                  </td>
+                </tr>
+              ) : (
+                data.map((eachUserData, i) => {
+                  return (
+                    <tr key={i}>
+                      <td className="py-1.5 px-3">{eachUserData.id}</td>
+                      <td className="py-1.5 px-3">{eachUserData.name}</td>
+                      <td className="py-1.5 px-3">{eachUserData.email}</td>
+                      <td className="flex justify-center gap-3 py-1.5 px-3">
+                        <Link to="/crud-user/edit-user">
+                          <button
+                            onClick={() =>
+                              editHandle(
+                                eachUserData.id,
+                                eachUserData.name,
+                                eachUserData.email
+                              )
+                            }
+                          >
+                            <CiEdit className="text-green-300" />
+                          </button>
+                        </Link>
+                        <button onClick={() => hanleDelete(eachUserData.id)}>
+                          <RiDeleteBin6Line className="text-red-600" />
                         </button>
-                      </Link>
-                      <button onClick={() => hanleDelete(eachUserData.id)}>
-                        <RiDeleteBin6Line className="text-red-600" />
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
+                      </td>
+                    </tr>
+                  );
+                })
+              )}
             </tbody>
           </table>
         </div>
