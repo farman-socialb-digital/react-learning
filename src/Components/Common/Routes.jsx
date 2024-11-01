@@ -23,6 +23,8 @@ import CreateUser from '../CrudUser/CreateUser';
 import EditUser from '../CrudUser/EditUser';
 import Hoc from '../Hoc/Hoc';
 import ReactHookForm from '../ReactHookForm/ReactHookForm';
+import TanStack from '../TanStack/TanStack'
+  import TanStackProduct from '../TanStack/TanStackProduct'
 import Redux from '../Redux/Redux'
 import NotFound from "./NotFound";
 
@@ -179,6 +181,20 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <ReactHookForm/>
+      </>
+    },
+    {
+      path: "/tanstack",
+      element: <>
+        <Navbar />
+        <TanStack/>
+      </>
+    },
+    {
+      path: "/tanstack/:productid",
+      element: <>
+        <Navbar />
+        <TanStackProduct/>
       </>
     },
     {

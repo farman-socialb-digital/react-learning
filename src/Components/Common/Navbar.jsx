@@ -9,8 +9,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/"
         >
@@ -21,8 +21,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/route-parameter/anyparameter"
         >
@@ -33,8 +33,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/nested-routing/"
         >
@@ -45,8 +45,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/basic-react"
         >
@@ -57,8 +57,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/useeffect"
         >
@@ -69,8 +69,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/usecontext"
         >
@@ -81,8 +81,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/useref"
         >
@@ -93,8 +93,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/usememo"
         >
@@ -105,8 +105,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/usecallback"
         >
@@ -117,8 +117,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/conditional-rendering"
         >
@@ -129,8 +129,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/lifting-state-up"
         >
@@ -141,8 +141,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/crud-user"
         >
@@ -153,8 +153,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/hoc"
         >
@@ -165,8 +165,8 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/react-hook-form"
         >
@@ -177,8 +177,20 @@ function Navbar() {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-gray-950 p-2 px-4 text-sm rounded-full text-gray-400 block"
-              : "bg-gray-800 p-2 px-4 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
+          }
+          to="/tanstack"
+        >
+          TanStack
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gray-950 p-1.5 px-3 text-sm rounded-full text-gray-400 block"
+              : "bg-gray-800 p-1.5 px-3 text-sm rounded-full text-gray-400 block hover:bg-gray-950"
           }
           to="/redux"
         >

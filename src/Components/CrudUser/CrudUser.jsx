@@ -62,7 +62,7 @@ function CrudUser() {
               {isLoading ? (
                 <tr>
                   <td colSpan={4} className="text-center">
-                    <img className="inline-block" src={loader} height={24} width={24} />
+                    <img className="inline-block" src={loader} height={34} width={34} />
                   </td>
                 </tr>
               ) : (
