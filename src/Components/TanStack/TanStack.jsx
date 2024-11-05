@@ -1,29 +1,47 @@
-import React, { useEffect, useState } from "react";
-import loader from "/svg/loader.svg";
+// import { useEffect, useState } from "react";
+import Loader from "/svg/loader.svg";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+
+let fetchProducts = async () => {
+  let response = await fetch("https://dummyjson.com/products");
+  let data = await response.json();
+  return data.products;
+};
 
 function TanStack() {
-  let [products, setProducts] = useState([]);
-  let [isLoading, setIsLoading] = useState(false);
-  let [error, setError] = useState(null);
+  const {
+    isLoading,
+    error,
+    data: products,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: fetchProducts,
+    staleTime: 10000,
+    refetchOnWindowFocus: false
+  });
 
-  console.log(products)
+  // let [products, setProducts] = useState([]);
+  // let [isLoading, setIsLoading] = useState(false);
+  // let [error, setError] = useState(null);
 
-  useEffect(() => {
-    let fetchProducts = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-        let response = await fetch("https://dummyjson.com/products");
-        let data = await response.json();
-        setProducts(data.products);
-        setIsLoading(false);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    fetchProducts();
-  }, []);
+  // console.log(products)
+
+  // useEffect(() => {
+  //   let fetchProducts = async () => {
+  //     try {
+  //       setIsLoading(true);
+  //       setError(null);
+  //       let response = await fetch("https://dummyjson.com/products");
+  //       let data = await response.json();
+  //       setProducts(data.products);
+  //       setIsLoading(false);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+  //   };
+  //   fetchProducts();
+  // }, []);
 
   return (
     <div className="container mx-auto mb-10 overflow-hidden rounded-xl">
@@ -34,33 +52,38 @@ function TanStack() {
         className={`${
           isLoading
             ? ""
-            : "mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+            : 
+            error ?
+            ""
+            :
+            "mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
         }`}
       >
         {isLoading ? (
+          <img
+            className="inline-block my-6"
+            src={Loader}
+            height={34}
+            width={34}
+          />
+        ) : (
           error ? (
             <div className="my-6 text-red-600">
-              Something went wrong with API Connect
+              {error.message}
             </div>
           ) : (
-            <div>
-              <img
-                className="inline-block my-6"
-                src={loader}
-                height={34}
-                width={34}
-              />
-            </div>
+            ""
           )
-        ) : (
-          ""
         )}
 
-        {products.map((product, i) => (
+        {products?.map((product, i) => (
           <div key={i}>
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80" onClick={()=>{
-              console.log(product.title)
-            }}>
+            <div
+              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              onClick={() => {
+                console.log(product.title);
+              }}
+            >
               <Link to={`/tanstack/${product.id}`}>
                 <img
                   alt={product.title}

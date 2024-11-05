@@ -1,9 +1,8 @@
-import React from 'react'
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import Home from "./Home";
+import Footer from "./Footer";
 import RouteParameter from "./RouteParameter";
 import NestedRouting from "../NestedRouting/NestedRouting";
   import Courses from "../NestedRouting/Courses";
@@ -35,6 +34,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <Home />
+          <Footer />
         </>
     },
     {
@@ -43,6 +43,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <RouteParameter />
+          <Footer />
         </>
     },
     {
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <NestedRouting />
+          <Footer />
         </>,
           children: [
             {
@@ -89,6 +91,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <BasicReact />
+          <Footer />
         </>
     },
     {
@@ -97,6 +100,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseEffectComponent/>
+          <Footer />
         </>
     },
     {
@@ -105,6 +109,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseContextComponent/>
+          <Footer />
         </>
     },
     {
@@ -113,6 +118,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseRefComponent/>
+          <Footer />
         </>
     },
     {
@@ -121,6 +127,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseMemoComponent/>
+          <Footer />
         </>
     },
     {
@@ -129,6 +136,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <UseCallbackComponent/>
+          <Footer />
         </>
     },
     {
@@ -137,6 +145,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <ConditionalRendering/>
+          <Footer />
         </>
     },
     {
@@ -145,6 +154,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <LiftingStateUp/>
+          <Footer />
         </>
     },
     {
@@ -153,6 +163,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <CrudUser/>
+          <Footer />
         </>,
     },
     {
@@ -160,6 +171,7 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <CreateUser/>
+        <Footer />
       </>
     },
     {
@@ -167,6 +179,7 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <EditUser/>
+        <Footer />
       </>
     },
     {
@@ -174,6 +187,7 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <Hoc/>
+        <Footer />
       </>
     },
     {
@@ -181,6 +195,7 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <ReactHookForm/>
+        <Footer />
       </>
     },
     {
@@ -188,13 +203,15 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <TanStack/>
+        <Footer />
       </>
     },
     {
-      path: "/tanstack/:productid",
+      path: "/tanstack/:productId",
       element: <>
         <Navbar />
         <TanStackProduct/>
+        <Footer />
       </>
     },
     {
@@ -202,6 +219,7 @@ const router = createBrowserRouter([
       element: <>
         <Navbar />
         <Redux/>
+        <Footer />
       </>
     },
     {
@@ -210,6 +228,7 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <NotFound />
+          <Footer />
         </>
     },
 ]);
