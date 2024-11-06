@@ -18,7 +18,7 @@ function TanStack() {
     queryKey: ["products"],
     queryFn: fetchProducts,
     staleTime: 10000,
-    refetchOnWindowFocus: false
+    refetchOnWindowFocus: false,
   });
 
   // let [products, setProducts] = useState([]);
@@ -52,11 +52,9 @@ function TanStack() {
         className={`${
           isLoading
             ? ""
-            : 
-            error ?
-            ""
-            :
-            "mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+            : error
+            ? ""
+            : "mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
         }`}
       >
         {isLoading ? (
@@ -66,24 +64,15 @@ function TanStack() {
             height={34}
             width={34}
           />
+        ) : error ? (
+          <div className="my-6 text-red-600">{error.message}</div>
         ) : (
-          error ? (
-            <div className="my-6 text-red-600">
-              {error.message}
-            </div>
-          ) : (
-            ""
-          )
+          ""
         )}
 
         {products?.map((product, i) => (
           <div key={i}>
-            <div
-              className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80"
-              onClick={() => {
-                console.log(product.title);
-              }}
-            >
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
               <Link to={`/tanstack/${product.id}`}>
                 <img
                   alt={product.title}
