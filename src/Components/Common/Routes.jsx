@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Footer from "./Footer";
+import Ems from "../Ems/Ems";
 import RouteParameter from "./RouteParameter";
 import NestedRouting from "../NestedRouting/NestedRouting";
   import Courses from "../NestedRouting/Courses";
@@ -34,6 +35,15 @@ const router = createBrowserRouter([
         <>
           <Navbar />
           <Home />
+          <Footer />
+        </>
+    },
+    {
+      path: "/employee-management-system",
+      element:
+        <>
+          <Navbar />
+          <Ems />
           <Footer />
         </>
     },

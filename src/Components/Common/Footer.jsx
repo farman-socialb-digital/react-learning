@@ -1,9 +1,8 @@
 function Footer() {
   return (
-    <div></div>
-    // <footer className="bg-gray-800 py-2 text-gray-400">
-    //   &copy; 2024
-    // </footer>
+    <footer id="footer" className="bg-gray-800 py-2 text-xs text-gray-400 absolute left-0 right-0 bottom-0">
+      &copy; Copyright 2024
+    </footer>
   );
 }
 
