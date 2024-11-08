@@ -25,17 +25,17 @@ function ReactHookForm() {
   }
 
   return (
-    <div className="max-w-[550px] m-auto border border-gray-700 overflow-hidden rounded-xl mb-8">
-      <p className="font-medium py-3 text-gray-300 bg-gray-800">
+    <div className="max-w-[550px] m-auto border border-slate-700 overflow-hidden rounded-xl mb-8">
+      <p className="font-medium py-3 text-slate-400 bg-slate-800">
         React Hook Form
       </p>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="m-8 text-gray-400 text-start"
+        className="m-8 text-slate-400 text-start"
       >
         <input
           type="text"
-          className={`rounded-full p-3 px-5 w-full bg-gray-800 outline-none text-gray-350 mb-3 ${
+          className={`rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-350 mb-3 ${
             errors.firstName ? "border border-red-600" : ""
           }`}
           placeholder="First Name"
@@ -51,7 +51,7 @@ function ReactHookForm() {
         )}
         <input
           type="text"
-          className={`rounded-full p-3 px-5 w-full bg-gray-800 outline-none text-gray-350 mt-5 mb-3 ${
+          className={`rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-350 mt-5 mb-3 ${
             errors.email ? "border border-red-600" : ""
           }`}
           placeholder="Email"
@@ -69,7 +69,7 @@ function ReactHookForm() {
         <div className="mt-5 text-center flex justify-center">
           <button
             type="submit"
-            className={`bg-green-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer flex ${
+            className={`bg-green-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer flex ${
               isSubmitting ? "opacity-50" : ""
             }`}
             disabled={isSubmitting}

@@ -27,19 +27,19 @@ function EditUser() {
   };
 
   return (
-    <div className="max-w-[550px] m-auto border border-gray-700 rounded-xl mb-8 overflow-hidden">
-      <p className="font-medium py-3 text-gray-300 bg-gray-800">Edit User</p>
+    <div className="max-w-[550px] m-auto border border-slate-700 rounded-xl mb-8 overflow-hidden">
+      <p className="font-medium py-3 text-slate-400 bg-slate-800">Edit User</p>
       <form action="#" className="m-6  space-y-6">
         <input
           type="text"
-          className="rounded-full p-3 w-full bg-gray-800 outline-none text-center text-gray-400"
+          className="rounded-full p-3 w-full bg-slate-800 outline-none text-center text-slate-400"
           placeholder="Full Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
-          className="rounded-full p-3 w-full bg-gray-800 outline-none text-center text-gray-400"
+          className="rounded-full p-3 w-full bg-slate-800 outline-none text-center text-slate-400"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -53,7 +53,7 @@ function EditUser() {
           </button>
           <Link
             to="/crud-user"
-            className="border border-gray-600 p-2 px-4 rounded-full text-gray-400"
+            className="border border-slate-600 p-2 px-4 rounded-full text-slate-400"
           >
             Back
           </Link>

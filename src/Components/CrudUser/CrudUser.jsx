@@ -41,15 +41,15 @@ function CrudUser() {
       <div className="flex justify-end max-w-[550px] m-auto">
         <Link
           to="/crud-user/create-user"
-          className="border border-gray-600 p-2 px-4 rounded-full text-gray-400 mb-4"
+          className="border border-slate-600 p-2 px-4 rounded-full text-slate-400 mb-4"
         >
           Create User
         </Link>
       </div>
-      <div className="max-w-[550px] m-auto border border-gray-700 rounded-xl mb-8 overflow-hidden">
-        <p className="font-medium py-3 text-gray-300 bg-gray-800">Users List</p>
+      <div className="max-w-[550px] m-auto border border-slate-700 rounded-xl mb-8 overflow-hidden">
+        <p className="font-medium py-3 text-slate-400 bg-slate-800">Users List</p>
         <div className="m-4">
-          <table className="w-full text-left rtl:text-right text-gray-500">
+          <table className="w-full text-left rtl:text-right text-slate-500">
             <thead>
               <tr>
                 <th className="py-1.5 px-3">ID</th>

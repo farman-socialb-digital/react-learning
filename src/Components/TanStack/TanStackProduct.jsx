@@ -36,7 +36,7 @@ function TanStackProduct() {
 
       <div className="container m-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-          <div className="bg-gray-800 rounded-2xl">
+          <div className="bg-slate-800 rounded-2xl">
             <img className="w-full" src={product?.images} alt="" />
           </div>
           <div className="mt-6 sm:mt-8 lg:mt-0 text-left">
@@ -50,18 +50,18 @@ function TanStackProduct() {
             </div>
 
             <div className="mt-6">
-              <button className="text-white rounded-lg px-5 py-2.5 flex items-center justify-center bg-gray-700">
+              <button className="text-white rounded-lg px-5 py-2.5 flex items-center justify-center bg-slate-700">
                 Shop Now
               </button>
             </div>
 
-            <hr className="my-6 md:my-8 border-gray-800 dark:border-gray-800" />
+            <hr className="my-6 md:my-8 border-slate-800 dark:border-slate-800" />
 
-            <p className="text-gray-500 mb-7">{product?.description}</p>
+            <p className="text-slate-500 mb-7">{product?.description}</p>
 
-            <p className="text-gray-500 mb-7">{product?.description}</p>
+            <p className="text-slate-500 mb-7">{product?.description}</p>
 
-            <p className="text-gray-500 mb-7">{product?.description}</p>
+            <p className="text-slate-500 mb-7">{product?.description}</p>
           </div>
         </div>
       </div>

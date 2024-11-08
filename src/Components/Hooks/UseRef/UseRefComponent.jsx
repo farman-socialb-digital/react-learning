@@ -46,24 +46,24 @@ function UseRefComponent() {
 
   return (
     <div>
-      <div className="max-w-[550px] m-auto border border-gray-700 overflow-hidden rounded-xl mb-8">
-        <p className="font-medium py-3 text-gray-300 bg-gray-800">Stopwatch</p>
-        <div className="text-gray-400 p-4">{time} Sec</div>
+      <div className="max-w-[550px] m-auto border border-slate-700 overflow-hidden rounded-xl mb-8">
+        <p className="font-medium py-3 text-slate-400 bg-slate-800">Stopwatch</p>
+        <div className="text-slate-400 p-4">{time} Sec</div>
         <div className="mb-4 flex justify-center gap-3">
           <button
-            className="bg-gray-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer"
+            className="bg-slate-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer"
             onClick={startTimer}
           >
             Start
           </button>
           <button
-            className="bg-gray-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer"
+            className="bg-slate-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer"
             onClick={stopTimer}
           >
             Stop
           </button>
           <button
-            className="bg-gray-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer"
+            className="bg-slate-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer"
             onClick={resetTimer}
           >
             Reset
@@ -72,7 +72,7 @@ function UseRefComponent() {
       </div>
 
       {/* <button
-        className="bg-green-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer mb-4"
+        className="bg-green-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer mb-4"
         ref={btnRef}
         onClick={increaseCount}
       >
@@ -80,7 +80,7 @@ function UseRefComponent() {
       </button>
       <p className="mb-4">{count}</p>
       <button
-        className="bg-yellow-700 p-2 px-4 rounded-full text-gray-300 cursor-pointer mb-4"
+        className="bg-yellow-700 p-2 px-4 rounded-full text-slate-300 cursor-pointer mb-4"
         onClick={changeColor}
       >
         Change color 1st Button

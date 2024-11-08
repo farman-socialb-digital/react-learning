@@ -46,7 +46,7 @@ function BasicReact() {
         <HelloHey hello={hello} changeHelloHey={changeHelloHey} />
       </div>
       <button
-        className="border border-gray-600 p-2 px-4 rounded-full text-gray-400 mb-8"
+        className="border border-slate-600 p-2 px-4 rounded-full text-slate-400 mb-8"
         onClick={navigatePageHome}
       >
         Go to Home

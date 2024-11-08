@@ -45,7 +45,7 @@ function TanStack() {
 
   return (
     <div className="container mx-auto mb-10 overflow-hidden rounded-xl">
-      <p className="font-medium py-3 text-gray-300 bg-gray-800">
+      <p className="font-medium py-3 text-slate-400 bg-slate-800">
         Products Listing
       </p>
       <div
@@ -72,7 +72,7 @@ function TanStack() {
 
         {products?.map((product, i) => (
           <div key={i}>
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-slate-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
               <Link to={`/tanstack/${product.id}`}>
                 <img
                   alt={product.title}
@@ -81,10 +81,10 @@ function TanStack() {
                 />
               </Link>
             </div>
-            <div className="mt-2 flex justify-between bg-gray-800 p-3 rounded-xl gap-5">
+            <div className="mt-2 flex justify-between bg-slate-800 p-3 rounded-xl gap-5">
               <Link
                 to={`/tanstack/${product.id}`}
-                className="text-gray-400 truncate"
+                className="text-slate-400 truncate"
               >
                 {product.title}
               </Link>

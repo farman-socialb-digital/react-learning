@@ -2,7 +2,7 @@ import React from "react";
 
 function HelloHey(props) {
   return (
-    <div className="bg-gray-800 rounded-xl p-5 pt-3 mb-8">
+    <div className="bg-slate-800 rounded-xl p-5 pt-3 mb-8">
       <p
         className={`mb-3 font-bold text-xl ${
           props.hello === true ? "text-red-400" : "text-green-400"
