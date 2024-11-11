@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-// import EmsLogin from "./EmsComponents/EmsAuth/EmsLogin";
-// import EmsAdminDashboard from "./EmsComponents/EmsDashboard/EmsAdminDashboard"
+import EmsLogin from "./EmsComponents/EmsAuth/EmsLogin";
 import EmsEmployeeDashboard from "./EmsComponents/EmsDashboard/EmsEmployeeDashboard"
+import EmsAdminDashboard from "./EmsComponents/EmsDashboard/EmsAdminDashboard"
 
 function Ems() {
   useEffect(() => {
@@ -17,9 +17,9 @@ function Ems() {
 
   return (
     <>
-      {/* <EmsLogin /> */}
-      {/* <EmsAdminDashboard /> */}
-      <EmsEmployeeDashboard />
+      <EmsLogin />
+      {/* <EmsEmployeeDashboard dashTitle="Employee" /> */}
+      {/* <EmsAdminDashboard dashTitle="Admin" /> */}
     </>
   );
 }
