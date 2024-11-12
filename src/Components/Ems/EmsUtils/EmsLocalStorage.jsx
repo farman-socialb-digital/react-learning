@@ -193,3 +193,13 @@ const admin = {
     password: "123",
   },
 };
+
+export const emsSetLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees))
+  localStorage.setItem("admin", JSON.stringify(admin))
+}
+export const emsGetLocalStorage = () => {
+  const emsEmployees = JSON.parse(localStorage.getItem("employees"))
+  const emsAdmin = JSON.parse(localStorage.getItem("admin"))
+  console.log(emsEmployees, emsAdmin)
+}

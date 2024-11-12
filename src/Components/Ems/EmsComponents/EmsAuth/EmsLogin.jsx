@@ -3,14 +3,13 @@ import { FaRegUser } from "react-icons/fa6";
 import { FaRegEye } from "react-icons/fa6";
 import fireIcon from "/images/fire.webp";
 
-function EmsLogin() {
-  
+function EmsLogin({handleLogin, invalidUser}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
   let onSubmit = (e) => {
     e.preventDefault();
-    console.log("Email is:", email, "and password is:", password)
+    handleLogin(email, password)
     setEmail("")
     setPassword("")
   };
@@ -92,6 +91,9 @@ function EmsLogin() {
               >
                 Sign in
               </button>
+            </div>
+            <div className={`text-sm text-red-600 border border-red-600 rounded-xl py-2 ${invalidUser == true ? "hidden" : "block"}`}>
+              {invalidUser}
             </div>
             {/* <p className="text-slate-800 text-sm mt-3 text-center">
             Don't have an account?{" "}

@@ -11,7 +11,7 @@ function Sidebar(props) {
           <span className="mx-2 font-bold text-slate-300 flex justify-center items-center gap-1 leading-4">
             EMS -
             <span className="font-normal text-[10px] rounded-xl bg-slate-800 px-2">
-              {props.dashTitle}
+              {props.dashboardTitle}
             </span>
           </span>
         </div>
