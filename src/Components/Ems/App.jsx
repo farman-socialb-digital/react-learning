@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import EmsLogin from "./EmsComponents/EmsAuth/EmsLogin";
 import EmsEmployeeDashboard from "./EmsComponents/EmsDashboard/EmsEmployeeDashboard";
 import EmsAdminDashboard from "./EmsComponents/EmsDashboard/EmsAdminDashboard";
-import { emsGetLocalStorage } from "./EmsUtils/EmsLocalStorage";
+import { EmsAuthContext } from "./EmsContext/EmsAuthProvider";
 
-function Ems() {
+function EmsMain() {
   useEffect(() => {
     document.getElementById("nav").classList.add("hidden");
     document.getElementById("langRtl").classList.add("hidden");
@@ -19,8 +19,6 @@ function Ems() {
   let [emsUser, setEmsUser] = useState(null)
   let [invalidUser, setInvalidUser] = useState(true)
 
-  emsGetLocalStorage()
-
   const handleLogin = (email, password) => {
     if(email == "admin@example.com" && password == "123456"){
       setEmsUser("admin")
@@ -30,6 +28,9 @@ function Ems() {
       setInvalidUser("Please enter correct email and password")
     }
   }
+
+  const data = useContext(EmsAuthContext)
+  console.log(data)
   
   return (
     <>
@@ -40,4 +41,4 @@ function Ems() {
   );
 }
 
-export default Ems;
+export default EmsMain;

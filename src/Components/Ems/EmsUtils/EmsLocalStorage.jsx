@@ -201,5 +201,5 @@ export const emsSetLocalStorage = () => {
 export const emsGetLocalStorage = () => {
   const emsEmployees = JSON.parse(localStorage.getItem("employees"))
   const emsAdmin = JSON.parse(localStorage.getItem("admin"))
-  console.log(emsEmployees, emsAdmin)
+  return {emsEmployees, emsAdmin}
 }
