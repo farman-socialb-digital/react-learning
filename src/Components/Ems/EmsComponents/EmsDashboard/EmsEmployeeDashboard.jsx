@@ -12,7 +12,8 @@ function EmsEmployeeDashboard(props) {
         <main className="flex-1 overflow-x-hidden overflow-y-auto custom-scrollbar">
           <div className="container mx-auto py-5 mb-12">
             <h3 className="text-lg text-slate-400 font-bold">
-              Dashboard {props.dashboardTitle}
+              Dashboard {props.dashboardTitle} aaa {props.loggedInUserData.id}
+              {console.log(props.loggedInUserData)}
             </h3>
             <div className="mt-4">
               <TaskListNumbers />

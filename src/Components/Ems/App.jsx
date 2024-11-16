@@ -5,36 +5,41 @@ import EmsAdminDashboard from "./EmsComponents/EmsDashboard/EmsAdminDashboard";
 import {EmsAuthContext} from "./EmsContext/EmsAuthProvider";
 
 function EmsMain() {
-  useEffect(() => {
-    document.getElementById("nav").classList.add("hidden");
-    document.getElementById("langRtl").classList.add("hidden");
-    document.getElementById("root").classList.remove("pb-16");
-    return () => {
-      document.getElementById("nav").classList.remove("hidden");
-      document.getElementById("langRtl").classList.remove("hidden");
-      document.getElementById("root").classList.add("pb-16");
-    };
-  }, []);
-
   let [emsUser, setEmsUser] = useState(null)
+  let [loggedInUserData, setLoggedInUserData] = useState(null)
   let [invalidUser, setInvalidUser] = useState(true)
   const authData = useContext(EmsAuthContext)
+
+  // useEffect(() => {
+  //   const loggedInUser = localStorage.getItem("loggedInUser")
+  //   if(loggedInUser){
+  //     setEmsUser(loggedInUser.role)
+  //   }
+  // }, [authData])
+  
 
   const handleLogin = (email, password) => {
     if(email == "admin@example.com" && password == "123456"){
       setEmsUser("admin")
-    } else if(authData && authData.emsEmployees.find((e)=>email == e.email && password == e.password)){
-      setEmsUser('employee')
-    } else {
-      setInvalidUser("Please enter correct email and password")
+      localStorage.setItem("loggedInUser", JSON.stringify({role: "admin"}))
+    } else if(authData){
+      const employee = authData.emsEmployees.find((e)=>email == e.email && password == e.password)
+      if(employee){
+        setEmsUser('employee')
+        setLoggedInUserData(employee)
+        localStorage.setItem("loggedInUser", JSON.stringify({role: "employee"}))
+      } else{
+        setInvalidUser("Please enter correct email and password")
+      }
     }
+    // else {}
   }
 
   return (
     <>
       {!emsUser ? <EmsLogin handleLogin={handleLogin} invalidUser={invalidUser} /> : ""}
       {emsUser == "admin" ? <EmsAdminDashboard dashboardTitle="Admin" /> : ""}
-      {emsUser == "employee" ? <EmsEmployeeDashboard dashboardTitle="Employee" /> : ""}
+      {emsUser == "employee" ? <EmsEmployeeDashboard dashboardTitle="Employee" loggedInUserData={loggedInUserData} /> : ""}
     </>
   );
 }
