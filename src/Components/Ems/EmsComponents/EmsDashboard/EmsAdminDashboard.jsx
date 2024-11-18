@@ -7,7 +7,7 @@ function EmsAdminDashboard(props) {
     <div className="flex h-screen">
       <EmsSidebar dashboardTitle="Admin" />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <EmsHeader />
+        <EmsHeader loggedInUserData={props.loggedInUserData} />
         <main className="flex-1 overflow-x-hidden overflow-y-auto custom-scrollbar">
           <div className="container mx-auto py-5 mb-12">
             <h3 className="text-lg text-slate-400 font-bold">

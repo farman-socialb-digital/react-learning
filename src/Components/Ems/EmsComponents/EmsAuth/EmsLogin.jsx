@@ -35,7 +35,7 @@ function EmsLogin({ handleLogin, invalidUser }) {
               className="inline-block opacity-80"
             />
           </div>
-          <div className="bg-slate-800 rounded-xl p-6 mx-4 shadow-2xl">
+          <div className="bg-slate-800 rounded-xl p-6 mx-4 shadow-xl">
             <h2 className="text-slate-400 text-center text-lg font-bold">
               Sign in
             </h2>
