@@ -224,7 +224,6 @@ const employees = [
 const admin = {
   admin: {
     id: 1,
-    fullName: "Admin",
     email: "admin@example.com",
     password: "123456",
   },

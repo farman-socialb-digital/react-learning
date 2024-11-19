@@ -9,22 +9,22 @@ function AllTasks(props) {
       {props.loggedInUserData.tasks.map((e, i) => {
         if (e.active) {
           return <div className="md:col-span-3" key={i}>
-            <EmsAcceptTask />
+            <EmsAcceptTask loggedInUserData={e} />
           </div>;
         }
         if (e.newTask) {
           return <div className="md:col-span-3" key={i}>
-            <EmsNewTask />
+            <EmsNewTask loggedInUserData={e} />
           </div>;
         }
         if (e.completed) {
           return <div className="md:col-span-3" key={i}>
-            <EmsCompleteTask />
+            <EmsCompleteTask loggedInUserData={e} />
           </div>;
         }
         if (e.failed) {
           return <div className="md:col-span-3" key={i}>
-            <EmsFailedTask />
+            <EmsFailedTask loggedInUserData={e} />
           </div>;
         }
       })}
