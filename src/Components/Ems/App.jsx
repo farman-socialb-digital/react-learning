@@ -41,8 +41,8 @@ function EmsMain() {
   return (
     <>
       {!emsUser ? <EmsLogin handleLogin={handleLogin} invalidUser={invalidUser} /> : ""}
-      {emsUser == "admin" ? <EmsAdminDashboard dashboardTitle="Admin" loggedInUserData={loggedInUserData} /> : ""}
-      {emsUser == "employee" ? <EmsEmployeeDashboard dashboardTitle="Employee" loggedInUserData={loggedInUserData} /> : ""}
+      {emsUser == "admin" ? <EmsAdminDashboard changeUser={setEmsUser} dashboardTitle="Admin" loggedInUserData={loggedInUserData} /> : ""}
+      {emsUser == "employee" ? <EmsEmployeeDashboard changeUser={setEmsUser} dashboardTitle="Employee" loggedInUserData={loggedInUserData} /> : ""}
     </>
   );
 }
