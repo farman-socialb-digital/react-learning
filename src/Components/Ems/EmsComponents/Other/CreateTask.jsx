@@ -1,47 +1,57 @@
 import { useState } from "react"
 
 function CreateTask() {
-  const [taskTitle, setTaskTitle] = useState("")
-  const [taskAssignTo, setTaskAssignTo] = useState("")
-  const [taskCategory, setTaskCategory] = useState("")
-  const [taskDate, setTaskDate] = useState("")
-  const [taskDescription, setTaskDescription] = useState("")
+  const [title, setTitle] = useState("")
+  const [assignTo, setAssignTo] = useState("")
+  const [category, setCategory] = useState("")
+  const [date, setDate] = useState("")
+  const [description, setDescription] = useState("")
+  const [createdTask, setCreatedTask] = useState({})
   const taskSubmit = (e) => {
     e.preventDefault()
-    console.log(taskTitle)
-    console.log(taskAssignTo)
-    console.log(taskCategory)
-    console.log(taskDate)
-    console.log(taskDescription)
-    setTaskTitle("")
-    setTaskAssignTo("")
-    setTaskCategory("")
-    setTaskDate("")
-    setTaskDescription("")
+
+    setCreatedTask({ title, category, date, description, active: false, newTask: true, completed: false, failed: false })
+
+    const data = JSON.parse(localStorage.getItem("employees"))
+
+    data.forEach(function (element){
+      if(assignTo == element.fullName){
+        element.tasks.push(createdTask)
+        console.log(element)
+        localStorage.setItem("employees", JSON.stringify("Hello"))
+      }
+    })
+
+    // setTitle("")
+    // setAssignTo("")
+    // setCategory("")
+    // setDate("")
+    // setDescription("")
+    // setCreatedTask("")
   }
   return (
     <div className="border border-slate-700 overflow-hidden rounded-xl mb-12">
       <p className="font-medium py-3 text-slate-400 bg-slate-800">
         Create Task
       </p>
-      <form className="m-8 block" onSubmit={(e)=>{ taskSubmit(e) }}>
+      <form className="m-8 block" onSubmit={taskSubmit}>
         <div className="grid grid-cols-12 gap-8">
           <div className="md:col-span-6">
             <input
               type="text"
               placeholder="Task Title"
-              value={taskTitle}
+              value={title}
               onChange={(e)=>{
-                setTaskTitle(e.target.value)
+                setTitle(e.target.value)
               }}
               className="rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-400 mb-6"
             />
             <input
               type="text"
               placeholder="Assign to (Employee name)"
-              value={taskAssignTo}
+              value={assignTo}
               onChange={(e)=>{
-                setTaskAssignTo(e.target.value)
+                setAssignTo(e.target.value)
               }}
               className="rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-400 mb-6"
               style={{ colorScheme: "dark" }}
@@ -49,18 +59,18 @@ function CreateTask() {
             <input
               type="text"
               placeholder="Category (Design, dev, etc)"
-              value={taskCategory}
+              value={category}
               onChange={(e)=>{
-                setTaskCategory(e.target.value)
+                setCategory(e.target.value)
               }}
               className="rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-400 mb-6"
               style={{ colorScheme: "dark" }}
             />
             <input
               type="date"
-              value={taskDate}
+              value={date}
               onChange={(e)=>{
-                setTaskDate(e.target.value)
+                setDate(e.target.value)
               }}
               className="rounded-full p-3 px-5 w-full bg-slate-800 outline-none text-slate-400 mb-6"
               style={{ colorScheme: "dark" }}
@@ -71,9 +81,9 @@ function CreateTask() {
               className="rounded-3xl p-3 px-5 w-full bg-slate-800 outline-none text-slate-400 mb-6"
               rows={10}
               placeholder="Description"
-              value={taskDescription}
+              value={description}
               onChange={(e)=>{
-                setTaskDescription(e.target.value)
+                setDescription(e.target.value)
               }}
             ></textarea>
           </div>

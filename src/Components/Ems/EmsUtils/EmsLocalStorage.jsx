@@ -5,10 +5,10 @@ const employees = [
     email: "employee1@example.com",
     password: "123456",
     taskCounts: {
-        active: 2,
-        newTask: 1,
-        completed: 1,
-        failed: 0
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0,
     },
     tasks: [
       {
@@ -40,7 +40,7 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-      }
+      },
     ],
   },
   {
@@ -52,8 +52,8 @@ const employees = [
       active: 1,
       newTask: 0,
       completed: 1,
-      failed: 0
-  },
+      failed: 0,
+    },
     tasks: [
       {
         title: "Task 1",
@@ -84,7 +84,7 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-      }
+      },
     ],
   },
   {
@@ -96,8 +96,8 @@ const employees = [
       active: 2,
       newTask: 1,
       completed: 1,
-      failed: 0
-  },
+      failed: 0,
+    },
     tasks: [
       {
         title: "Task 1",
@@ -128,7 +128,7 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-      }
+      },
     ],
   },
   {
@@ -140,8 +140,8 @@ const employees = [
       active: 2,
       newTask: 1,
       completed: 0,
-      failed: 0
-  },
+      failed: 0,
+    },
     tasks: [
       {
         title: "Task 1",
@@ -172,7 +172,7 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-      }
+      },
     ],
   },
   {
@@ -184,8 +184,8 @@ const employees = [
       active: 2,
       newTask: 1,
       completed: 1,
-      failed: 0
-  },
+      failed: 0,
+    },
     tasks: [
       {
         title: "Task 1",
@@ -216,9 +216,9 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-      }
+      },
     ],
-  }
+  },
 ];
 
 const admin = {
@@ -230,12 +230,12 @@ const admin = {
 };
 
 export const emsSetLocalStorage = () => {
-  localStorage.setItem("employees", JSON.stringify(employees))
-  localStorage.setItem("admin", JSON.stringify(admin))
-}
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
 export const emsGetLocalStorage = () => {
-  emsSetLocalStorage()
-  const emsEmployees = JSON.parse(localStorage.getItem("employees"))
-  const emsAdmin = JSON.parse(localStorage.getItem("admin"))
-  return {emsEmployees, emsAdmin}
-}
+  emsSetLocalStorage();
+  const emsEmployees = JSON.parse(localStorage.getItem("employees"));
+  const emsAdmin = JSON.parse(localStorage.getItem("admin"));
+  return { emsEmployees, emsAdmin };
+};
