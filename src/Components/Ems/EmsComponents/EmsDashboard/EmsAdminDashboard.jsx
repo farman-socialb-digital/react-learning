@@ -5,8 +5,7 @@ import { useContext } from "react";
 import { EmsAuthContext } from "../../EmsContext/EmsAuthProvider";
 
 function EmsAdminDashboard(props) {
-  const authData = useContext(EmsAuthContext);
-
+  const [userData, setUserData] = useContext(EmsAuthContext);
   return (
     <div className="flex h-screen">
       <EmsSidebar dashboardTitle="Admin" />
@@ -30,7 +29,7 @@ function EmsAdminDashboard(props) {
               </div>
             </div>
             <div className="mt-2">
-              {authData.emsEmployees.map((e, i) => {
+              {userData.map((e, i) => {
                 return (
                   <div
                     className="flex justify-between rounded-md text-slate-500 border border-slate-700 p-3 px-5 mb-2"

@@ -7,13 +7,13 @@ function EmsAuthProvider(props) {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    const {emsEmployees, emsAdmin} = emsGetLocalStorage();
-    setUserData({emsEmployees, emsAdmin});
+    const {emsEmployees} = emsGetLocalStorage();
+    setUserData(emsEmployees);
   }, []);
 
   return (
     <>
-      <EmsAuthContext.Provider value={userData}>
+      <EmsAuthContext.Provider value={[userData, setUserData]}>
         {props.children}
       </EmsAuthContext.Provider>
     </>

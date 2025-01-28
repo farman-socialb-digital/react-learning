@@ -8,7 +8,7 @@ function EmsMain() {
   let [emsUser, setEmsUser] = useState(null)
   let [loggedInUserData, setLoggedInUserData] = useState(null)
   let [invalidUser, setInvalidUser] = useState(true)
-  const authData = useContext(EmsAuthContext)
+  const [userData, setUserData] = useContext(EmsAuthContext)
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser")
@@ -25,8 +25,8 @@ function EmsMain() {
       setEmsUser("admin")
       setLoggedInUserData("Admin")
       localStorage.setItem("loggedInUser", JSON.stringify({role: "admin"}))
-    } else if(authData){
-      const employee = authData.emsEmployees.find((e)=>email == e.email && password == e.password)
+    } else if(userData){
+      const employee = userData.find((e)=>email == e.email && password == e.password)
       if(employee){
         setEmsUser('employee')
         setLoggedInUserData(employee)

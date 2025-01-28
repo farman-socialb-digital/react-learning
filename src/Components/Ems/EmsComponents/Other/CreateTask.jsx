@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { EmsAuthContext } from "../../EmsContext/EmsAuthProvider";
 
 function CreateTask() {
+  const [userData, setUserData] = useContext(EmsAuthContext);
+
   const [title, setTitle] = useState("")
   const [assignTo, setAssignTo] = useState("")
   const [category, setCategory] = useState("")
@@ -12,15 +15,17 @@ function CreateTask() {
 
     setCreatedTask({ title, category, date, description, active: false, newTask: true, completed: false, failed: false })
 
-    const data = JSON.parse(localStorage.getItem("employees"))
+    const data = userData;
 
     data.forEach(function (element){
       if(assignTo == element.fullName){
         element.tasks.push(createdTask)
-        console.log(element)
-        localStorage.setItem("employees", JSON.stringify("Hello"))
+        element.taskCounts.newTask = element.taskCounts.newTask+1
       }
     })
+    setUserData(data)
+
+    console.log(data)
 
     // setTitle("")
     // setAssignTo("")
